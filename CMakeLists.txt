@@ -3,6 +3,16 @@ cmake_minimum_required(VERSION 3.10)
 project(QVTKTransformation)
 
 set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+
+include_directories(
+  "./include/"
+)
 
 file(GLOB HPP_FILES "include/*.hpp")
 file(GLOB CPP_FILES "src/*.cpp")
@@ -14,3 +24,5 @@ add_executable(
   ${CPP_FILES}
   ${UI_FILES}
 )
+
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

@@ -1,0 +1,14 @@
+# add build dir
+build
+cmake-build-debug
+build-debug
+
+# add cmake cache file
+CMakeCache.txt
+
+# clang settings
+.clang-format
+.clang-tidy
+
+# clangd cache
+.cache/

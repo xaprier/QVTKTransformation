@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(QVTKTransformation)
 
-set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)

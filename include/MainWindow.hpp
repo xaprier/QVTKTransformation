@@ -2,6 +2,8 @@
 #define MAINWINDOW_HPP
 
 #include <QMainWindow>
+#include <QMenu>
+#include <QToolButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +19,10 @@ class MainWindow : public QMainWindow {
     ~MainWindow();
 
   private:
+    void createInitialMenus();
     Ui::MainWindow *ui;
+    QMenu m_saveMenu, m_removeMenu, m_addDataMenu;
+    QToolButton m_saveMenuBtn, m_removeMenuBtn, m_addDataMenuBtn;
 };
 
 #endif  // MAINWINDOW_HPP

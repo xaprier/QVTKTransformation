@@ -13,8 +13,7 @@ MainWindow::~MainWindow() {
 void MainWindow::createInitialMenus() {
     {  // m_saveMenu
         this->m_saveMenuBtn.setMenu(&this->m_saveMenu);
-        // todo: icon of m_saveMenu
-        // this->m_saveMenuBtn.setIcon(QIcon(""));
+        this->m_saveMenuBtn.setIcon(QPixmap(":/i/menu-save.svg"));
         this->m_saveMenuBtn.setPopupMode(QToolButton::InstantPopup);
         this->m_saveMenuBtn.setText("Save");
         this->ui->toolBar->insertWidget(this->ui->actionQuit, &this->m_saveMenuBtn);
@@ -25,8 +24,7 @@ void MainWindow::createInitialMenus() {
     }
     {  // m_removeMenu
         this->m_removeMenuBtn.setMenu(&this->m_removeMenu);
-        // todo: icon of m_removeMenu
-        // this->m_removeMenuBtn.setIcon(QIcon(""));
+        this->m_removeMenuBtn.setIcon(QPixmap(":/i/menu-remove.svg"));
         this->m_removeMenuBtn.setPopupMode(QToolButton::InstantPopup);
         this->m_removeMenuBtn.setText("Remove");
         this->ui->toolBar->insertWidget(this->ui->actionQuit, &this->m_removeMenuBtn);
@@ -36,8 +34,7 @@ void MainWindow::createInitialMenus() {
     }
     {  // m_addDataMenu
         this->m_addDataMenuBtn.setMenu(&this->m_addDataMenu);
-        // todo: icon of m_addDataMenu
-        // this->m_addDataMenuBtn.setIcon(QIcon(""));
+        this->m_addDataMenuBtn.setIcon(QPixmap(":/i/menu-add.svg"));
         this->m_addDataMenuBtn.setPopupMode(QToolButton::InstantPopup);
         this->m_addDataMenuBtn.setText("Add Data");
         this->ui->toolBar->insertWidget(this->ui->actionQuit, &this->m_addDataMenuBtn);

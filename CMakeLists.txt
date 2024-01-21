@@ -16,12 +16,14 @@ include_directories(
 file(GLOB HPP_FILES "include/*.hpp")
 file(GLOB CPP_FILES "src/*.cpp")
 file(GLOB UI_FILES "design/*.ui")
+file(GLOB QRC_FILES "images/*.qrc")
 
 add_executable(
   ${PROJECT_NAME}
   ${HPP_FILES}
   ${CPP_FILES}
   ${UI_FILES}
+  images/images.qrc
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

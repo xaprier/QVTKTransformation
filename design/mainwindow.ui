@@ -98,6 +98,10 @@
    <addaction name="actionQuit"/>
   </widget>
   <action name="actionNew_Scene">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/i/scene-new.svg</normaloff>:/i/scene-new.svg</iconset>
+   </property>
    <property name="text">
     <string>New Scene</string>
    </property>
@@ -106,6 +110,10 @@
    </property>
   </action>
   <action name="actionClose_Scene">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/i/scene-close.svg</normaloff>:/i/scene-close.svg</iconset>
+   </property>
    <property name="text">
     <string>Close Scene</string>
    </property>
@@ -135,6 +143,10 @@
    </property>
   </action>
   <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/i/quit.svg</normaloff>:/i/quit.svg</iconset>
+   </property>
    <property name="text">
     <string>Quit</string>
    </property>
@@ -194,6 +206,10 @@
    </property>
   </action>
   <action name="actionImport_Data">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/i/import-data.svg</normaloff>:/i/import-data.svg</iconset>
+   </property>
    <property name="text">
     <string>Import Data</string>
    </property>
@@ -204,6 +220,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
  <connections/>
 </ui>

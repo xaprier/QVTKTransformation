@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/i">
+        <file>import-data.svg</file>
+        <file>menu-add.svg</file>
+        <file>menu-remove.svg</file>
+        <file>menu-save.svg</file>
+        <file>quit.svg</file>
+        <file>scene-close.svg</file>
+        <file>scene-new.svg</file>
+    </qresource>
+</RCC>

@@ -52,15 +52,16 @@
      <property name="title">
       <string>Add Data</string>
      </property>
-     <addaction name="actionSphere"/>
-     <addaction name="actionArrow"/>
-     <addaction name="actionCone"/>
-     <addaction name="actionCube"/>
-     <addaction name="actionCylinder"/>
-     <addaction name="actionDisk"/>
+     <addaction name="action_dataAdd_Sphere"/>
+     <addaction name="action_dataAdd_Arrow"/>
+     <addaction name="action_dataAdd_Cone"/>
+     <addaction name="action_dataAdd_Cube"/>
+     <addaction name="action_dataAdd_Cylinder"/>
+     <addaction name="action_dataAdd_Disk"/>
     </widget>
     <addaction name="menuAdd_Data"/>
     <addaction name="actionRemove_Active_Data"/>
+    <addaction name="actionRemove_All_Data"/>
     <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
@@ -75,6 +76,27 @@
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_Scene"/>
+   <addaction name="actionClose_Scene"/>
+   <addaction name="actionImport_Data"/>
+   <addaction name="actionQuit"/>
+  </widget>
   <action name="actionNew_Scene">
    <property name="text">
     <string>New Scene</string>
@@ -141,39 +163,44 @@
     <string>Ctrl+X</string>
    </property>
   </action>
-  <action name="actionSphere">
+  <action name="action_dataAdd_Sphere">
    <property name="text">
-    <string>Sphere</string>
+    <string>Add Sphere</string>
    </property>
   </action>
-  <action name="actionArrow">
+  <action name="action_dataAdd_Arrow">
    <property name="text">
-    <string>Arrow</string>
+    <string>Add Arrow</string>
    </property>
   </action>
-  <action name="actionCone">
+  <action name="action_dataAdd_Cone">
    <property name="text">
-    <string>Cone</string>
+    <string>Add Cone</string>
    </property>
   </action>
-  <action name="actionCube">
+  <action name="action_dataAdd_Cube">
    <property name="text">
-    <string>Cube</string>
+    <string>Add Cube</string>
    </property>
   </action>
-  <action name="actionCylinder">
+  <action name="action_dataAdd_Cylinder">
    <property name="text">
-    <string>Cylinder</string>
+    <string>Add Cylinder</string>
    </property>
   </action>
-  <action name="actionDisk">
+  <action name="action_dataAdd_Disk">
    <property name="text">
-    <string>Disk</string>
+    <string>Add Disk</string>
    </property>
   </action>
   <action name="actionImport_Data">
    <property name="text">
     <string>Import Data</string>
+   </property>
+  </action>
+  <action name="actionRemove_All_Data">
+   <property name="text">
+    <string>Remove All Data</string>
    </property>
   </action>
  </widget>

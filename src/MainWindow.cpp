@@ -2,12 +2,22 @@
 
 #include "../design/ui_mainwindow.h"
 
-MainWindow::MainWindow(QMainWindow *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow* MainWindow::m_instance = nullptr;
+
+MainWindow* MainWindow::getInstance() {
+    if (m_instance == nullptr) {
+        m_instance = new MainWindow();
+    }
+    return m_instance;
+}
+
+MainWindow::MainWindow(QMainWindow* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     this->createInitialMenus();
 }
 MainWindow::~MainWindow() {
     delete ui;
+    delete m_instance;
 }
 
 void MainWindow::createInitialMenus() {

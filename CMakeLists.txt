@@ -23,7 +23,7 @@ add_executable(
   ${HPP_FILES}
   ${CPP_FILES}
   ${UI_FILES}
-  images/images.qrc
+  ${QRC_FILES}
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

@@ -21,8 +21,8 @@ class MainWindow : public QMainWindow {
   private:
     void createInitialMenus();
     Ui::MainWindow *ui;
-    QMenu m_saveMenu, m_removeMenu, m_addDataMenu;
-    QToolButton m_saveMenuBtn, m_removeMenuBtn, m_addDataMenuBtn;
+    QMenu m_saveMenu, m_datasMenu, m_addDataMenu;
+    QToolButton m_saveMenuBtn, m_datasMenuBtn, m_addDataMenuBtn;
 };
 
 #endif  // MAINWINDOW_HPP

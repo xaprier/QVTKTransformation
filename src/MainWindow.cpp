@@ -23,14 +23,14 @@ void MainWindow::createInitialMenus() {
         this->m_saveMenu.addAction(this->ui->actionSave_All);
     }
     {  // m_removeMenu
-        this->m_removeMenuBtn.setMenu(&this->m_removeMenu);
-        this->m_removeMenuBtn.setIcon(QPixmap(":/i/menu-remove.svg"));
-        this->m_removeMenuBtn.setPopupMode(QToolButton::InstantPopup);
-        this->m_removeMenuBtn.setText("Remove");
-        this->ui->toolBar->insertWidget(this->ui->actionQuit, &this->m_removeMenuBtn);
-
-        this->m_removeMenu.addAction(this->ui->actionRemove_Active_Data);
-        this->m_removeMenu.addAction(this->ui->actionRemove_All_Data);
+        this->m_datasMenuBtn.setMenu(&this->m_datasMenu);
+        this->m_datasMenuBtn.setIcon(QPixmap(":/i/menu-data.svg"));
+        this->m_datasMenuBtn.setPopupMode(QToolButton::InstantPopup);
+        this->m_datasMenuBtn.setText("Remove");
+        this->ui->toolBar->insertWidget(this->ui->actionQuit, &this->m_datasMenuBtn);
+        this->m_datasMenu.addAction(this->ui->actionRemove_Active_Data);
+        this->m_datasMenu.addAction(this->ui->actionRemove_All_Data);
+        this->m_datasMenu.addSeparator();
     }
     {  // m_addDataMenu
         this->m_addDataMenuBtn.setMenu(&this->m_addDataMenu);

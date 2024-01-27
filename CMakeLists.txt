@@ -2,12 +2,15 @@ cmake_minimum_required(VERSION 3.10)
 
 project(QVTKTransformation)
 
+add_subdirectory(lib)
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(VTK REQUIRED)
 
 include_directories(
   "./include/"
@@ -26,4 +29,4 @@ add_executable(
   ${QRC_FILES}
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE xvtktransformation Qt${QT_VERSION_MAJOR}::Widgets ${VTK_LIBRARIES})
